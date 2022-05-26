@@ -1,0 +1,90 @@
+:root {
+  --color1: #7541c8;
+  --color2: #d91323;
+  --color3: #000064;
+  --color4: #111418;
+}
+
+body {
+  place-content: center;
+  line-height: 1.5;
+  background: rgb(235, 235, 235);
+}
+
+article {
+  p:first-of-type {
+    font-weight: 700;
+  }
+  border-radius: 0.5rem;
+  padding: 2em;
+  color: white;
+}
+.article1 {
+  background: var(--color1);
+}
+.article2 {
+  background: var(--color2);
+}
+.article3 {
+  background: white;
+  color: black;
+}
+.article4 {
+  background: var(--color4);
+}
+.article5 {
+  background: var(--color3);
+}
+
+.testimonial-grid {
+  display: grid;
+  gap: 1.5rem;
+
+  p:first-of-type {
+    font-size: 400;
+    line-height: 1.2;
+  }
+}
+.flex {
+  display: flex;
+  gap: 1rem;
+  img {
+    display: block;
+    border-radius: 50%;
+    width: 1.75rem;
+  }
+
+  div,
+  h2,
+  p {
+    margin: 0;
+  }
+  .name {
+    font-size: 300;
+    font-weight: 600;
+    line-height: 1;
+  }
+  .position {
+    font-size: 300;
+    opacity: 0.5;
+  }
+}
+
+@media only screen and (min-width: 50em) {
+  .testimonial-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .article5 {
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .article1 {
+    grid-column: span 2;
+  }
+  .article4 {
+    grid-column: span 2;
+  }
+}
